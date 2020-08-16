@@ -17,11 +17,14 @@ export default class TourList extends Component {
   render() {
     const { tours } = this.state;
     return (
-      <section className="tourlist">
-        {tours.map((tour) => (
-          <Tour key={tour.id} tour={tour} removeTour={this.removeTour} />
-        ))}
-      </section>
+      <React.Fragment>
+        <h1>This is my sample application to show tour list</h1>
+        <section className="tourlist">
+          {tours.map((tour) => (
+            <Tour key={tour.id} tour={tour} removeTour={this.removeTour} />
+          ))}
+        </section>
+      </React.Fragment>
     );
   }
 }
